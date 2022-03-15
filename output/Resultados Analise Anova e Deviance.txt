@@ -1,0 +1,897 @@
+$AbortionRatePond
+$AbortionRatePond$LRT
+$AbortionRatePond$LRT[[1]]
+Data: data
+Models:
+model.rd2: get(trait) ~ Mes + (1 | Mes:Ano)
+model.rd: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae)
+model: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae/Pai)
+          npar    AIC    BIC  logLik deviance   Chisq Df Pr(>Chisq)    
+model.rd2   14 2595.5 2648.3 -1283.8   2567.5                          
+model.rd    15 2581.3 2637.9 -1275.7   2551.3 16.2233  1   5.63e-05 ***
+model       16 2577.3 2637.7 -1272.7   2545.3  6.0096  1    0.01423 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$AbortionRatePond$LRT[[2]]
+Data: data
+Models:
+model.rd3: get(trait) ~ Mes + (1 | Mae/Pai)
+model: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae/Pai)
+          npar    AIC    BIC  logLik deviance  Chisq Df Pr(>Chisq)   
+model.rd3   15 2584.3 2640.8 -1277.1   2554.3                        
+model       16 2577.3 2637.7 -1272.7   2545.3 8.9807  1   0.002728 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$AbortionRatePond$anova
+Analysis of Variance Table
+    npar Sum Sq Mean Sq F value
+Mes   11 525.96  47.814  0.4099
+
+$AbortionRatePond$`Var comp`
+       grp        var1 var2      vcov     sdcor
+1  Pai:Mae (Intercept) <NA>  27.87061  5.279263
+2      Mae (Intercept) <NA>  22.19805  4.711481
+3  Mes:Ano (Intercept) <NA>  32.46153  5.697502
+4 Residual        <NA> <NA> 116.63874 10.799941
+
+$AbortionRatePond$BLUPS
+$AbortionRatePond$BLUPS$Mae
+                (Intercept)
+2011-52-01       1.08904657
+2011-52-23      -0.64427540
+2011-53-07       2.17390135
+359-09           0.63525463
+4271            -2.09546710
+7909-02          1.81525797
+7909-04         -9.44254812
+7909-05         -3.18525680
+98150-6         -0.73082079
+Aipim Abacate    1.49117680
+Aipim Manteiga  -0.19859863
+Aipim Ze Marcos  0.56968722
+BGM0019          1.77900139
+BGM0046          1.37388700
+BGM0061          1.71831089
+BGM0089          3.32172872
+BGM0093         -1.42968828
+BGM0128          1.63878286
+BGM0131          0.11556347
+BGM0174         -1.04105657
+BGM0323          1.64521629
+BGM0470         -4.55863941
+BGM0661          1.52587065
+BGM0685         -2.54646183
+BGM0717          1.18821916
+BGM0728         -4.05569029
+BGM0729         -1.06263107
+BGM0816          0.56084605
+BGM0872         -0.24528946
+BGM0888          0.02469963
+BGM0941          2.36268618
+BGM0942         -0.97342501
+BGM0946          1.43299473
+BGM0958          2.29696481
+BGM0968          0.93595926
+BGM0971          1.06435171
+BGM0991         -5.60652540
+BGM1023          3.31284488
+BGM1024          1.95817030
+BGM1028         -0.71133463
+BGM1130          3.63518688
+BGM1143          0.95019639
+BGM1146          0.69355249
+BGM1163          0.15775766
+BGM1174          1.27761037
+BGM1253          0.63140836
+BGM1259          1.87454677
+BGM1284          3.67852781
+BGM1309         -1.99808970
+BGM1332         -0.40957602
+BGM1413          1.48203896
+BGM1422          2.45995782
+BGM1444         -1.70939194
+BGM1448         -0.51262123
+BGM1487         -0.13492312
+BGM1583         -2.45622589
+BGM1638          1.32663601
+BGM1659          2.76855918
+BGM1662         -0.02838259
+BGM1693          1.60065478
+BGM1716          1.14970313
+BGM1760          0.96555676
+BGM1784         -0.30970422
+BGM1811         -0.33755335
+BGM1819         -4.26974341
+BGM1942          0.88614535
+BGM2018          0.88583134
+BGM2020         -8.91798643
+BGM2044         -2.45930449
+BGM2127          0.76270247
+BGM2142          0.70473840
+BGM2155         -1.18432833
+BGM2167         -0.92915087
+BRS Dourada      1.33653556
+BRS Formosa      0.31952848
+BRS Gema de Ovo  1.29361248
+BRS Jari        -1.54314079
+BRS KIRIRIS      1.20925926
+BRS Mulatinha    2.52478222
+BRS MULATINHA    0.72812601
+BRS Rosada       1.94560308
+BRS Tapioqueira -7.57378322
+BRS Verdinha     0.04014591
+Cascuda         -2.40853838
+Cigana           0.93504932
+Fecula Branca    2.78099347
+Guela Jacu      -1.62724400
+Olho Junto       0.30202756
+
+$AbortionRatePond$BLUPS$Pai
+                                (Intercept)
+2011-52-01:2011-53-07            1.90650306
+2011-52-01:Olho Junto            0.37920867
+2011-52-23:Aipim Manteiga       -2.05183374
+2011-52-23:Aipim Ze Marcos      -6.27769754
+2011-52-23:Cascuda              -5.18081539
+2011-53-07:Guela Jacu           -2.04307522
+6683:7909-02                     1.38304714
+6683:BGM1659                     1.23940616
+6683:BGM1942                     1.66030811
+6683:BGM2044                    -1.74562713
+7909-02:7909-04                -12.36815798
+7909-02:98150-6                  3.90167176
+7909-02:BGM0816                  1.37215684
+7909-02:BGM1023                  2.46518081
+7909-02:BGM1024                  0.28595479
+7909-02:BGM1716                  1.20030081
+7909-02:BGM1760                  1.21229827
+7909-02:BGM1784                  0.46434249
+7909-02:BGM1942                 -0.54771430
+7909-02:BGM2044                 -0.11370520
+7909-02:BRS Dourada              0.98971729
+7909-02:BRS Formosa              0.40118183
+7909-02:BRS Jari                 1.28769521
+7909-02:BRS KIRIRIS              1.51827730
+7909-02:BRS MULATINHA            0.91419369
+7909-04:7909-05                 -4.57567786
+7909-04:BGM0661                  0.69480117
+7909-04:BGM0888                 -1.99240874
+7909-04:BGM2044                 -1.27866263
+7909-04:Cascuda                  1.19979978
+7909-05:7909-02                 -0.10133843
+7909-05:BGM2142                  0.88482954
+Aipim Abacate:BGM1163            3.21406470
+Aipim Abacate:BGM2020            4.70020804
+Aipim Abacate:BRS Jari          -3.22517521
+Aipim Manteiga:2011-53-07        0.80573275
+Aipim Manteiga:Aipim Ze Marcos   0.70051347
+Aipim Manteiga:BGM0174          -1.30709155
+Aipim Manteiga:Cascuda           1.43194901
+Aipim Manteiga:Fecula Branca     3.49165758
+Aipim Ze Marcos:2011-52-01      -0.83612982
+Aipim Ze Marcos:2011-52-23      -1.95606913
+Aipim Ze Marcos:2011-53-07       0.01719135
+Aipim Ze Marcos:4271            -2.63094957
+BGM0046:BGM0093                 -1.79503547
+BGM0046:BGM0323                 -0.81501375
+BGM0046:BGM1716                  0.24320120
+BGM0128:BGM0888                  2.04252010
+BGM0128:BGM1130                  1.33115979
+BGM0128:BGM2018                  2.18582738
+BGM0216:BGM0323                  0.65075065
+BGM0661:BGM0128                  2.05756275
+BGM0661:BRS Dourada              0.68836091
+BGM0661:BRS Tapioqueira          0.13104619
+BGM0685:2011-52-01               2.20347489
+BGM0685:2011-52-23               1.14715351
+BGM0685:Aipim Manteiga           0.37556850
+BGM0685:Aipim Ze Marcos          1.17242633
+BGM0685:BGM0019                  2.23361319
+BGM0685:BGM0061                  2.33449936
+BGM0685:BGM0089                  4.17057406
+BGM0685:Cascuda                  0.66678112
+BGM0717:BGM2127                  0.93667381
+BGM0728:BGM0685                 -3.19719296
+BGM0728:BGM0946                  1.79918686
+BGM0728:BGM1163                 -3.01599313
+BGM0728:BGM1448                 -0.64361812
+BGM0816:BGM0661                  1.22099542
+BGM0816:BGM1259                  0.88595444
+BGM0816:BGM2155                 -1.48697544
+BGM0818:BGM1487                 -0.16940182
+BGM0818:BRS Tapioqueira          0.75927018
+BGM0865:BGM1284                  4.61855076
+BGM0888:7909-02                 -0.07899037
+BGM0888:BGM0470                 -5.72356893
+BGM0888:BGM0717                  1.49186055
+BGM0888:BGM0991                  0.79150311
+BGM0888:BGM1332                 -0.13355982
+BGM0888:BGM2020                 -1.13069259
+BGM0935:BGM0728                 -5.09209456
+BGM0935:BGM0941                  2.96645468
+BGM0935:BGM0971                  1.33633960
+BGM0935:BGM1143                  1.19301267
+BGM0935:BGM1422                  3.08858343
+BGM0958:BGM1146                  0.87078515
+BGM0958:BGM1413                  1.86076401
+BGM0968:BGM1819                 -5.36084752
+BGM0971:BGM0942                 -1.22217720
+BGM0971:BGM1444                 -2.14621552
+BGM0991:BGM0888                 -0.01909991
+BGM0991:BGM2018                 -1.07362782
+BGM1028:BGM0872                 -0.30797153
+BGM1130:BGM0816                 -3.05870015
+BGM1156:BGM2020                 -2.58803366
+BGM1163:BGM0061                 -0.17708571
+BGM1163:BGM0131                  0.14509494
+BGM1253:7909-02                  0.25175278
+BGM1253:7909-05                  2.40261578
+BGM1253:BGM0046                  2.41464982
+BGM1253:BGM0816                  1.55289105
+BGM1253:BGM0991                 -3.71553039
+BGM1253:BGM1023                  1.74141702
+BGM1253:BGM1024                  2.45996865
+BGM1253:BGM1259                  1.46762011
+BGM1253:BGM1659                  1.55445492
+BGM1253:BGM2044                  3.89961625
+BGM1253:BGM2127                  0.80488218
+BGM1259:Cascuda                 -1.19805914
+BGM1332:BGM0046                 -0.68967527
+BGM1332:BGM2020                 -3.73340011
+BGM1332:BGM2044                 -3.84938442
+BGM1444:BGM0729                 -1.33417927
+BGM1444:BGM0968                  1.17513733
+BGM1444:BGM1662                 -0.03563557
+BGM1455:BGM0323                  2.22990331
+BGM1487:BGM2020                 -5.73671458
+BGM1583:BGM1253                  2.15784024
+BGM1583:BGM1638                  1.66564889
+BGM1583:BRS Gema de Ovo          1.62418642
+BGM1583:BRS Verdinha             2.00297871
+BGM1662:BGM0958                  2.88393866
+BGM1716:359-09                   0.79758966
+BGM1716:BGM1784                 -0.85318953
+BGM1716:BGM2020                 -1.32769292
+BGM1760:BGM1253                  6.08438913
+BGM1784:98150-6                 -4.81924887
+BGM1784:BGM0816                  0.83781873
+BGM1784:BGM1023                 -0.04717782
+BGM1784:BGM1024                 -0.28735594
+BGM1784:BGM1130                  3.25863482
+BGM1784:BGM1583                 -0.70432927
+BGM1784:BGM1659                  0.68218471
+BGM1784:BGM1811                 -0.42381283
+BGM1784:BGM2020                 -1.38059182
+BGM1784:Cigana                   1.17399486
+BGM2018:BGM1253                 -1.23084004
+BGM2018:BRS Mulatinha            3.16997328
+BGM2020:BGM1583                 -2.37956857
+BGM2020:BGM1693                  2.00969130
+BGM2020:BRS Tapioqueira        -10.39952876
+BGM2044:BGM0991                 -6.12184716
+BGM2044:BGM1028                 -0.89311140
+BGM2044:BGM1174                  1.60409508
+BGM2044:BGM1309                 -2.50868804
+BGM2044:BGM1332                 -0.38068059
+BGM2044:BGM2127                 -0.78395005
+BGM2044:BGM2167                 -1.16658910
+BGM2167:BGM0991                  2.00663932
+BGM2167:BGM1130                 -0.02566026
+BGM2167:BGM1253                 -6.21862884
+BGM2167:BRS Verdinha            -1.95257378
+BRS Dourada:Aipim Manteiga       0.77123834
+BRS Jari:Aipim Abacate           1.87223697
+BRS Kiriris:7909-02              1.15657109
+BRS Kiriris:7909-05             -1.82616560
+BRS Tapioqueira:Cascuda          0.05632053
+Cascuda:7909-02                 -0.33190732
+Cascuda:7909-04                  0.51263044
+Cascuda:Aipim Manteiga          -0.87883765
+Fecula Branca:Aipim Ze Marcos    2.52225462
+Fecula Branca:BRS Rosada         2.44278881
+FLA-002-02:Aipim Ze Marcos       2.59777005
+FLA-005-19:Aipim Manteiga        1.53451538
+
+
+
+$PercOvuFertility
+$PercOvuFertility$LRT
+$PercOvuFertility$LRT[[1]]
+Data: data
+Models:
+model.rd2: get(trait) ~ Mes + (1 | Mes:Ano)
+model.rd: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae)
+model: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae/Pai)
+          npar    AIC    BIC  logLik deviance   Chisq Df Pr(>Chisq)    
+model.rd2   14 2595.5 2648.3 -1283.7   2567.5                          
+model.rd    15 2581.3 2637.9 -1275.7   2551.3 16.1828  1  5.751e-05 ***
+model       16 2577.3 2637.6 -1272.7   2545.3  6.0091  1    0.01423 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$PercOvuFertility$LRT[[2]]
+Data: data
+Models:
+model.rd3: get(trait) ~ Mes + (1 | Mae/Pai)
+model: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae/Pai)
+          npar    AIC    BIC  logLik deviance  Chisq Df Pr(>Chisq)   
+model.rd3   15 2584.3 2640.8 -1277.1   2554.3                        
+model       16 2577.3 2637.6 -1272.7   2545.3 8.9706  1   0.002744 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$PercOvuFertility$anova
+Analysis of Variance Table
+    npar Sum Sq Mean Sq F value
+Mes   11 526.14  47.831    0.41
+
+$PercOvuFertility$`Var comp`
+       grp        var1 var2      vcov     sdcor
+1  Pai:Mae (Intercept) <NA>  27.86842  5.279055
+2      Mae (Intercept) <NA>  22.14965  4.706342
+3  Mes:Ano (Intercept) <NA>  32.44659  5.696191
+4 Residual        <NA> <NA> 116.66496 10.801156
+
+$PercOvuFertility$BLUPS
+$PercOvuFertility$BLUPS$Mae
+                (Intercept)
+2011-52-01      -1.08906313
+2011-52-23       0.64815608
+2011-53-07      -2.16479012
+359-09          -0.63791967
+4271             2.08720652
+7909-02         -1.80719122
+7909-04          9.42274454
+7909-05          3.17975206
+98150-6          0.72892963
+Aipim Abacate   -1.48706617
+Aipim Manteiga   0.19585075
+Aipim Ze Marcos -0.56874603
+BGM0019         -1.77397919
+BGM0046         -1.37663789
+BGM0061         -1.72226278
+BGM0089         -3.31387615
+BGM0093          1.42543993
+BGM0128         -1.63551770
+BGM0131         -0.11467768
+BGM0174          1.03794420
+BGM0323         -1.63607244
+BGM0470          4.54593065
+BGM0661         -1.51693050
+BGM0685          2.54326489
+BGM0717         -1.18680301
+BGM0728          4.05261618
+BGM0729          1.06170316
+BGM0816         -0.56229742
+BGM0872          0.24332074
+BGM0888         -0.02762074
+BGM0941         -2.35454854
+BGM0942          0.96680832
+BGM0946         -1.43417301
+BGM0958         -2.29692617
+BGM0968         -0.93363892
+BGM0971         -1.06620653
+BGM0991          5.59761541
+BGM1023         -3.31130882
+BGM1024         -1.95546104
+BGM1028          0.71639083
+BGM1130         -3.63693238
+BGM1143         -0.95426755
+BGM1146         -0.68950018
+BGM1163         -0.15874401
+BGM1174         -1.27939065
+BGM1253         -0.62984247
+BGM1259         -1.86855437
+BGM1284         -3.67075473
+BGM1309          1.99561603
+BGM1332          0.40685547
+BGM1413         -1.48676091
+BGM1422         -2.45442106
+BGM1444          1.70718702
+BGM1448          0.51196086
+BGM1487          0.13442131
+BGM1583          2.44958914
+BGM1638         -1.32660544
+BGM1659         -2.75956247
+BGM1662          0.02935274
+BGM1693         -1.59361639
+BGM1716         -1.14810212
+BGM1760         -0.96879385
+BGM1784          0.30450569
+BGM1811          0.32901449
+BGM1819          4.26618673
+BGM1942         -0.87598315
+BGM2018         -0.87915037
+BGM2020          8.90559006
+BGM2044          2.45994632
+BGM2127         -0.75887299
+BGM2142         -0.70341139
+BGM2155          1.17653977
+BGM2167          0.93170383
+BRS Dourada     -1.32947590
+BRS Formosa     -0.31273662
+BRS Gema de Ovo -1.28826753
+BRS Jari         1.54588384
+BRS KIRIRIS     -1.20414076
+BRS Mulatinha   -2.51733117
+BRS MULATINHA   -0.72927549
+BRS Rosada      -1.94052519
+BRS Tapioqueira  7.55094813
+BRS Verdinha    -0.04246428
+Cascuda          2.40890855
+Cigana          -0.93127671
+Fecula Branca   -2.77514875
+Guela Jacu       1.62511268
+Olho Junto      -0.30537280
+
+$PercOvuFertility$BLUPS$Pai
+                               (Intercept)
+2011-52-01:2011-53-07          -1.91528732
+2011-52-01:Olho Junto          -0.38421628
+2011-52-23:Aipim Manteiga       2.04802898
+2011-52-23:Aipim Ze Marcos      6.28249348
+2011-52-23:Cascuda              5.17340103
+2011-53-07:Guela Jacu           2.04469671
+6683:7909-02                   -1.36971922
+6683:BGM1659                   -1.24177655
+6683:BGM1942                   -1.66050282
+6683:BGM2044                    1.74454793
+7909-02:7909-04                12.37161207
+7909-02:98150-6                -3.89529353
+7909-02:BGM0816                -1.37297024
+7909-02:BGM1023                -2.46112951
+7909-02:BGM1024                -0.28290498
+7909-02:BGM1716                -1.20288303
+7909-02:BGM1760                -1.21892445
+7909-02:BGM1784                -0.47036061
+7909-02:BGM1942                 0.55835163
+7909-02:BGM2044                 0.11347209
+7909-02:BRS Dourada            -0.99079703
+7909-02:BRS Formosa            -0.39348135
+7909-02:BRS Jari               -1.28347028
+7909-02:BRS KIRIRIS            -1.51503504
+7909-02:BRS MULATINHA          -0.91756541
+7909-04:7909-05                 4.57750442
+7909-04:BGM0661                -0.68697229
+7909-04:BGM0888                 1.99321206
+7909-04:BGM2044                 1.27576797
+7909-04:Cascuda                -1.20378594
+7909-05:7909-02                 0.09200384
+7909-05:BGM2142                -0.88502353
+Aipim Abacate:BGM1163          -3.20883148
+Aipim Abacate:BGM2020          -4.69478823
+Aipim Abacate:BRS Jari          3.22848223
+Aipim Manteiga:2011-53-07      -0.79717796
+Aipim Manteiga:Aipim Ze Marcos -0.70225097
+Aipim Manteiga:BGM0174          1.30592857
+Aipim Manteiga:Cascuda         -1.42668945
+Aipim Manteiga:Fecula Branca   -3.49165788
+Aipim Ze Marcos:2011-52-01      0.83462172
+Aipim Ze Marcos:2011-52-23      1.96714156
+Aipim Ze Marcos:2011-53-07     -0.01124692
+Aipim Ze Marcos:4271            2.62609746
+BGM0046:BGM0093                 1.79347092
+BGM0046:BGM0323                 0.81451523
+BGM0046:BGM1716                -0.24164488
+BGM0128:BGM0888                -2.04479107
+BGM0128:BGM1130                -1.32991452
+BGM0128:BGM2018                -2.17740298
+BGM0216:BGM0323                -0.65474631
+BGM0661:BGM0128                -2.05778818
+BGM0661:BRS Dourada            -0.68193312
+BGM0661:BRS Tapioqueira        -0.13441609
+BGM0685:2011-52-01             -2.20486750
+BGM0685:2011-52-23             -1.15163958
+BGM0685:Aipim Manteiga         -0.37116528
+BGM0685:Aipim Ze Marcos        -1.17625181
+BGM0685:BGM0019                -2.23199871
+BGM0685:BGM0061                -2.33662254
+BGM0685:BGM0089                -4.16947805
+BGM0685:Cascuda                -0.66097958
+BGM0717:BGM2127                -0.93186204
+BGM0728:BGM0685                 3.19990447
+BGM0728:BGM0946                -1.80445878
+BGM0728:BGM1163                 3.00910173
+BGM0728:BGM1448                 0.64414283
+BGM0816:BGM0661                -1.22161093
+BGM0816:BGM1259                -0.88685382
+BGM0816:BGM2155                 1.48030780
+BGM0818:BGM1487                 0.16912723
+BGM0818:BRS Tapioqueira        -0.75855311
+BGM0865:BGM1284                -4.61849827
+BGM0888:7909-02                 0.08503592
+BGM0888:BGM0470                 5.71963381
+BGM0888:BGM0717                -1.49322089
+BGM0888:BGM0991                -0.80341028
+BGM0888:BGM1332                 0.12691738
+BGM0888:BGM2020                 1.12655736
+BGM0935:BGM0728                 5.09895163
+BGM0935:BGM0941                -2.96246390
+BGM0935:BGM0971                -1.34148788
+BGM0935:BGM1143                -1.20064765
+BGM0935:BGM1422                -3.08812227
+BGM0958:BGM1146                -0.86752061
+BGM0958:BGM1413                -1.87062421
+BGM0968:BGM1819                 5.36766346
+BGM0971:BGM0942                 1.21642629
+BGM0971:BGM1444                 2.14796162
+BGM0991:BGM0888                 0.01682693
+BGM0991:BGM2018                 1.07126684
+BGM1028:BGM0872                 0.30614315
+BGM1130:BGM0816                 3.05894845
+BGM1156:BGM2020                 2.59748667
+BGM1163:BGM0061                 0.16969277
+BGM1163:BGM0131                -0.14428605
+BGM1253:7909-02                -0.25090987
+BGM1253:7909-05                -2.39695246
+BGM1253:BGM0046                -2.41689937
+BGM1253:BGM0816                -1.55021805
+BGM1253:BGM0991                 3.72379213
+BGM1253:BGM1023                -1.74624288
+BGM1253:BGM1024                -2.47001852
+BGM1253:BGM1259                -1.46413821
+BGM1253:BGM1659                -1.55221077
+BGM1253:BGM2044                -3.90119461
+BGM1253:BGM2127                -0.81039685
+BGM1259:Cascuda                 1.19723963
+BGM1332:BGM0046                 0.68483057
+BGM1332:BGM2020                 3.72972117
+BGM1332:BGM2044                 3.86248070
+BGM1444:BGM0729                 1.33582181
+BGM1444:BGM0968                -1.17469295
+BGM1444:BGM1662                 0.03693125
+BGM1455:BGM0323                -2.21825506
+BGM1487:BGM2020                 5.72459337
+BGM1583:BGM1253                -2.15493451
+BGM1583:BGM1638                -1.66911858
+BGM1583:BRS Gema de Ovo        -1.62088230
+BGM1583:BRS Verdinha           -2.00837415
+BGM1662:BGM0958                -2.88996414
+BGM1716:359-09                 -0.80262265
+BGM1716:BGM1784                 0.85348591
+BGM1716:BGM2020                 1.32455168
+BGM1760:BGM1253                -6.08436544
+BGM1784:98150-6                 4.81242379
+BGM1784:BGM0816                -0.84323583
+BGM1784:BGM1023                 0.04112453
+BGM1784:BGM1024                 0.29258656
+BGM1784:BGM1130                -3.26110031
+BGM1784:BGM1583                 0.70958269
+BGM1784:BGM1659                -0.67806010
+BGM1784:BGM1811                 0.41396197
+BGM1784:BGM2020                 1.39678142
+BGM1784:Cigana                 -1.17172086
+BGM2018:BGM1253                 1.22408453
+BGM2018:BRS Mulatinha          -3.16727499
+BGM2020:BGM1583                 2.37246011
+BGM2020:BGM1693                -2.00506846
+BGM2020:BRS Tapioqueira        10.39347889
+BGM2044:BGM0991                 6.12439177
+BGM2044:BGM1028                 0.90135409
+BGM2044:BGM1174                -1.60971351
+BGM2044:BGM1309                 2.51085944
+BGM2044:BGM1332                 0.38498315
+BGM2044:BGM2127                 0.78745427
+BGM2044:BGM2167                 1.17225825
+BGM2167:BGM0991                -2.00192303
+BGM2167:BGM1130                 0.01507143
+BGM2167:BGM1253                 6.22275540
+BGM2167:BRS Verdinha            1.95494611
+BRS Dourada:Aipim Manteiga     -0.76902875
+BRS Jari:Aipim Abacate         -1.87100829
+BRS Kiriris:7909-02            -1.16442295
+BRS Kiriris:7909-05             1.82017282
+BRS Tapioqueira:Cascuda        -0.04832670
+Cascuda:7909-02                 0.33422661
+Cascuda:7909-04                -0.51603125
+Cascuda:Aipim Manteiga          0.87239589
+Fecula Branca:Aipim Ze Marcos  -2.52180511
+Fecula Branca:BRS Rosada       -2.44154483
+FLA-002-02:Aipim Ze Marcos     -2.59777482
+FLA-005-19:Aipim Manteiga      -1.53381385
+
+
+
+$NSeedsPond
+$NSeedsPond$LRT
+$NSeedsPond$LRT[[1]]
+Data: data
+Models:
+model.rd2: get(trait) ~ Mes + (1 | Mes:Ano)
+model.rd: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae)
+model: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae/Pai)
+          npar    AIC    BIC  logLik deviance   Chisq Df Pr(>Chisq)    
+model.rd2   14 4093.5 4146.3 -2032.8   4065.5                          
+model.rd    15 4072.1 4128.7 -2021.1   4042.1 23.3763  1  1.332e-06 ***
+model       16 4070.6 4131.0 -2019.3   4038.6  3.5124  1    0.06091 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+$NSeedsPond$LRT[[2]]
+Data: data
+Models:
+model.rd3: get(trait) ~ Mes + (1 | Mae/Pai)
+model: get(trait) ~ Mes + (1 | Mes:Ano) + (1 | Mae/Pai)
+          npar    AIC    BIC  logLik deviance  Chisq Df Pr(>Chisq)    
+model.rd3   15 4079.7 4136.3 -2024.9   4049.7                         
+model       16 4070.6 4131.0 -2019.3   4038.6 11.122  1   0.000853 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+$NSeedsPond$anova
+Analysis of Variance Table
+    npar Sum Sq Mean Sq F value
+Mes   11  95135  8648.6  0.7091
+
+$NSeedsPond$`Var comp`
+       grp        var1 var2      vcov     sdcor
+1  Pai:Mae (Intercept) <NA>  2177.847  46.66741
+2      Mae (Intercept) <NA>  3206.874  56.62927
+3  Mes:Ano (Intercept) <NA>  3848.491  62.03621
+4 Residual        <NA> <NA> 12196.163 110.43624
+
+$NSeedsPond$BLUPS
+$NSeedsPond$BLUPS$Mae
+                (Intercept)
+2011-52-01      -13.4617052
+2011-52-23       52.6312749
+2011-53-07      -24.9515733
+359-09          -14.9353050
+4271             18.2220764
+7909-02         -10.6435377
+7909-04          71.6841036
+7909-05          40.3728374
+98150-6          21.0568598
+Aipim Abacate   -19.8071188
+Aipim Manteiga   17.6853311
+Aipim Ze Marcos  -9.8243545
+BGM0019         -38.5574051
+BGM0046         -12.9999414
+BGM0061         -32.9188266
+BGM0089         -56.7683205
+BGM0093          32.3659057
+BGM0128         -27.7610673
+BGM0131           0.5662494
+BGM0174           9.0444460
+BGM0323          -9.3455023
+BGM0470          36.2112367
+BGM0661         -18.4128176
+BGM0685          32.5111987
+BGM0717         -23.1180995
+BGM0728          63.9040496
+BGM0729          -0.1016629
+BGM0816           9.5002381
+BGM0872           5.9618251
+BGM0888          16.0129249
+BGM0941         -44.2099566
+BGM0942           0.8825687
+BGM0946         -15.6827026
+BGM0958         -37.5711557
+BGM0968         -24.8599667
+BGM0971         -15.7804493
+BGM0991          77.3148675
+BGM1023         -31.1611318
+BGM1024         -19.1659991
+BGM1028           5.6024835
+BGM1130         -48.3057034
+BGM1143         -15.9002280
+BGM1146         -11.5611654
+BGM1163         -13.9616517
+BGM1174         -22.0252520
+BGM1253           2.7453884
+BGM1259         -22.6179815
+BGM1284         -61.4879813
+BGM1309          19.4645114
+BGM1332          14.6095392
+BGM1413         -22.0368179
+BGM1422         -52.7605981
+BGM1444          -7.0170564
+BGM1448           4.8985614
+BGM1487           6.8788511
+BGM1583          23.7651912
+BGM1638         -16.1871568
+BGM1659         -34.7945750
+BGM1662           3.6769449
+BGM1693         -18.3453004
+BGM1716         -15.0688504
+BGM1760         -12.8090028
+BGM1784          -8.7836262
+BGM1811           8.5336755
+BGM1819          99.6854135
+BGM1942         -16.2106259
+BGM2018          -1.1539109
+BGM2020         154.8872970
+BGM2044          31.3955572
+BGM2127          -9.4767271
+BGM2142           6.9590358
+BGM2155           8.8677179
+BGM2167          12.1487413
+BRS Dourada     -16.0670105
+BRS Formosa       3.8910984
+BRS Gema de Ovo -21.8204551
+BRS Jari         26.6616160
+BRS KIRIRIS     -11.4954743
+BRS Mulatinha   -26.7262939
+BRS MULATINHA    -7.4504839
+BRS Rosada      -22.0632752
+BRS Tapioqueira  54.8748247
+BRS Verdinha     17.2382337
+Cascuda          36.0189498
+Cigana           -7.5414983
+Fecula Branca   -30.8343690
+Guela Jacu       12.7177774
+Olho Junto       -4.9077320
+
+$NSeedsPond$BLUPS$Pai
+                                (Intercept)
+2011-52-01:2011-53-07          -12.82203105
+2011-52-01:Olho Junto           -3.33293063
+2011-52-23:Aipim Manteiga       18.25888756
+2011-52-23:Aipim Ze Marcos      42.13608156
+2011-52-23:Cascuda              49.38752997
+2011-53-07:Guela Jacu            8.63687537
+6683:7909-02                   -15.60439424
+6683:BGM1659                    -5.61294623
+6683:BGM1942                   -13.15090449
+6683:BGM2044                    10.15602752
+7909-02:7909-04                 45.93781788
+7909-02:98150-6                -26.13473665
+7909-02:BGM0816                -10.89479317
+7909-02:BGM1023                -10.55948105
+7909-02:BGM1024                 -0.45028232
+7909-02:BGM1716                -13.49144783
+7909-02:BGM1760                 -8.69882819
+7909-02:BGM1784                 -8.22693863
+7909-02:BGM1942                  2.14197181
+7909-02:BGM2044                 -5.53380114
+7909-02:BRS Dourada             -4.67241337
+7909-02:BRS Formosa              2.64251616
+7909-02:BRS Jari                -7.18537359
+7909-02:BRS KIRIRIS             -7.80678698
+7909-02:BRS MULATINHA           -5.05975995
+7909-04:7909-05                 40.74832094
+7909-04:BGM0661                 -5.45042039
+7909-04:BGM0888                 19.05050365
+7909-04:BGM2044                  8.03719547
+7909-04:Cascuda                 -7.92554330
+7909-05:7909-02                 -3.40761242
+7909-05:BGM2142                  4.72600859
+Aipim Abacate:BGM1163          -32.69611387
+Aipim Abacate:BGM2020          -52.79244534
+Aipim Abacate:BRS Jari          25.29176493
+Aipim Manteiga:2011-53-07       -9.56228016
+Aipim Manteiga:Aipim Ze Marcos -11.54240112
+Aipim Manteiga:BGM0174           6.14224876
+Aipim Manteiga:Cascuda          -5.15253389
+Aipim Manteiga:Fecula Branca   -20.94018422
+Aipim Ze Marcos:2011-52-01       3.59071060
+Aipim Ze Marcos:2011-52-23      50.58168227
+Aipim Ze Marcos:2011-53-07       5.43924118
+Aipim Ze Marcos:4271            12.37494557
+BGM0046:BGM0093                 21.98027883
+BGM0046:BGM0323                  9.65583943
+BGM0046:BGM1716                  3.25791576
+BGM0128:BGM0888                -12.70560295
+BGM0128:BGM1130                -10.38878348
+BGM0128:BGM2018                -12.49406236
+BGM0216:BGM0323                  1.76656635
+BGM0661:BGM0128                -18.85304880
+BGM0661:BRS Dourada             -6.23898749
+BGM0661:BRS Tapioqueira         10.12866551
+BGM0685:2011-52-01             -12.73280094
+BGM0685:2011-52-23             -14.83882033
+BGM0685:Aipim Manteiga          -3.05048786
+BGM0685:Aipim Ze Marcos         -6.08988286
+BGM0685:BGM0019                -26.18503936
+BGM0685:BGM0061                -22.59669664
+BGM0685:BGM0089                -38.55240526
+BGM0685:Cascuda                 -6.18432145
+BGM0717:BGM2127                 -3.30741275
+BGM0728:BGM0685                 22.07894996
+BGM0728:BGM0946                -10.65041033
+BGM0728:BGM1163                 23.21450068
+BGM0728:BGM1448                  3.32670266
+BGM0816:BGM0661                 -7.05406096
+BGM0816:BGM1259                 -3.67985721
+BGM0816:BGM2155                  6.02222947
+BGM0818:BGM1487                  4.67155369
+BGM0818:BRS Tapioqueira         -6.78578336
+BGM0865:BGM1284                -41.75761327
+BGM0888:7909-02                 -0.22293916
+BGM0888:BGM0470                 24.59171351
+BGM0888:BGM0717                -15.69992438
+BGM0888:BGM0991                -15.45344601
+BGM0888:BGM1332                  6.93447072
+BGM0888:BGM2020                 13.20081553
+BGM0935:BGM0728                 43.39840948
+BGM0935:BGM0941                -30.02379053
+BGM0935:BGM0971                -10.71679190
+BGM0935:BGM1143                -10.79813582
+BGM0935:BGM1422                -35.83068769
+BGM0958:BGM1146                 -7.85139898
+BGM0958:BGM1413                -14.96560630
+BGM0968:BGM1819                 67.69818849
+BGM0971:BGM0942                  0.59936858
+BGM0971:BGM1444                 -4.76541139
+BGM0991:BGM0888                  4.52976966
+BGM0991:BGM2018                 11.71042038
+BGM1028:BGM0872                  4.04878450
+BGM1130:BGM0816                 43.97208764
+BGM1156:BGM2020                 25.75879802
+BGM1163:BGM0061                  0.24091908
+BGM1163:BGM0131                  0.38455035
+BGM1253:7909-02                  9.86983000
+BGM1253:7909-05                -19.84701346
+BGM1253:BGM0046                 -9.81146611
+BGM1253:BGM0816                -14.34176608
+BGM1253:BGM0991                 29.47515288
+BGM1253:BGM1023                -12.65799454
+BGM1253:BGM1024                -16.03997667
+BGM1253:BGM1259                -11.68042792
+BGM1253:BGM1659                -13.68487644
+BGM1253:BGM2044                -35.22111015
+BGM1253:BGM2127                 -4.52148687
+BGM1259:Cascuda                  8.90361096
+BGM1332:BGM0046                  0.98296804
+BGM1332:BGM2020                 54.25475832
+BGM1332:BGM2044                 43.88298573
+BGM1444:BGM0729                 -0.06904116
+BGM1444:BGM0968                -16.88285833
+BGM1444:BGM1662                  2.49708055
+BGM1455:BGM0323                -17.76910738
+BGM1487:BGM2020                 28.21770205
+BGM1583:BGM1253                -14.45297822
+BGM1583:BGM1638                -10.99299442
+BGM1583:BRS Gema de Ovo        -14.81867034
+BGM1583:BRS Verdinha           -13.26606794
+BGM1662:BGM0958                -25.51525940
+BGM1716:359-09                 -10.14283895
+BGM1716:BGM1784                  2.26181736
+BGM1716:BGM2020                 24.45726926
+BGM1760:BGM1253                -29.16275009
+BGM1784:98150-6                 40.43483543
+BGM1784:BGM0816                -12.28374287
+BGM1784:BGM1023                  2.05538073
+BGM1784:BGM1024                  3.47427828
+BGM1784:BGM1130                -21.01544905
+BGM1784:BGM1583                  2.98050966
+BGM1784:BGM1659                 -4.33180996
+BGM1784:BGM1811                  5.79537518
+BGM1784:BGM2020                 12.08989988
+BGM1784:Cigana                  -5.12156951
+BGM2018:BGM1253                 -0.28715867
+BGM2018:BRS Mulatinha          -18.15031528
+BGM2020:BGM1583                 13.15886659
+BGM2020:BGM1693                -12.45862923
+BGM2020:BRS Tapioqueira         33.92361549
+BGM2044:BGM0991                 59.25923746
+BGM2044:BGM1028                  3.80474908
+BGM2044:BGM1174                -14.95775165
+BGM2044:BGM1309                 13.21870590
+BGM2044:BGM1332                  2.98713467
+BGM2044:BGM2127                  1.39308081
+BGM2044:BGM2167                  8.25043251
+BGM2167:BGM0991                -20.77500300
+BGM2167:BGM1130                 -1.40105461
+BGM2167:BGM1253                 45.76733047
+BGM2167:BRS Verdinha            24.97286788
+BRS Dourada:Aipim Manteiga     -10.31623370
+BRS Jari:Aipim Abacate         -13.45137685
+BRS Kiriris:7909-02             -1.31867892
+BRS Kiriris:7909-05              6.51662520
+BRS Tapioqueira:Cascuda        -14.56761438
+Cascuda:7909-02                  3.45557350
+Cascuda:7909-04                  2.74416868
+Cascuda:Aipim Manteiga          19.30764275
+Fecula Branca:Aipim Ze Marcos  -16.28967406
+Fecula Branca:BRS Rosada       -14.98357391
+FLA-002-02:Aipim Ze Marcos     -14.88602247
+FLA-005-19:Aipim Manteiga      -12.18937674
+
+
+
